@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+:root {
+    --blue: rgb(14, 23, 24);
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 5rem;
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    margin: 2rem 0;
+    color: var(--blue);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--blue);
+    color: #ffffff;
+    padding: 0.8rem 3rem;
+    border: 0.2rem solid var(--blue);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+}
+
+.btn:hover {
+    color: var(--blue);
+    background: rgba(41, 165, 163, 0.2);
+}
+
+/* header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1b0157;
+}
+
+/* header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #9b9e9e;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+.header .navbar a {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0 0.8rem;
+}
+
+.header .navbar a:hover {
+    color: var(--blue);
+}
+
+.header .btn {
+    margin-top: 0;
+}
+
+#menu-btn {
+    color: #333;
+    border: 0.1rem solid #333;
+    font-size: 3rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none;
+}
+/* end */
+
+/* home */
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    position: relative;
+}
+
+.home .content {
+    text-align: center;
+}
+
+.home .content h3 {
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.home .content p {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+
+.home .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* end */
+
+/* about */
+
+.about .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 5rem;
+}
+
+.about .container .image-container {
+    flex: 1 1 42rem;
+}
+
+.about .container .image-container .image {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.about .container .image-container .controls {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.about .container .image-container .controls span {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: var(--blue);
+    cursor: pointer;
+    margin: 0.7rem;
+}
+
+.about .container .image-container .controls span:hover {
+    background: rgba(41, 165, 163, 0.2);
+}
+
+.about .container .content {
+    flex: 1 1 42rem;
+    margin-bottom: 8rem;
+}
+
+.about .container .content span {
+    color: var(--blue);
+    font-size: 2rem;
+}
+
+.about .container .content h3 {
+    color: #333;
+    font-size: 4rem;
+    margin-top: 0.5rem;
+}
+
+.about .container .content p {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    color: #666;
+    line-height: 2;
+}
+
+/* end */
+
+/* registration */
+
+.registration {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    position: relative;
+}
+
+.registration .content {
+    text-align: center;
+}
+
+.registration .content h3 {
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.registration .content p {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+
+.registration .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* end */
+
+/* login */
+
+.menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+#login-button {
+    background-color: var(--blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #646370;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.sub-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sub-menu a:hover {
+    background-color: #ddd;
+}
+
+.menu-container:hover .sub-menu {
+    display: block;
+}
+
+/* footer */
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.footer .box-container .box {
+    padding: 1rem 0;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    color: var(--blue);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    font-size: 1.4rem;
+    color: #666;
+    padding: 1rem 0;
+    line-height: 2;
+    cursor: pointer;
+    display: block;
+}
+
+.footer .box-container .box a:hover {
+    color: violet;
+}
+
+.footer .box-container .box i {
+    padding-right: 0.5rem;
+    color: var(--blue);
+}

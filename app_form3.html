@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   
+ <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  </head>
+  <body>
+<div class="container">
+  <div class="columns">
+    <div class="column col-auto col-mx-auto">
+		<div class="form-group">
+<form target="_self"
+      id="bootstrapForm"
+      method="POST">
+<fieldset>
+    <legend for="1352329021">Scholarship Application Form</legend>
+    <div class="form-group">
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend for="1967869864"></legend>
+    <div class="form-group">
+        <div class="radio">
+            <label>
+                <input type="radio" name="entry.404002631" value="3 Accomplishments" required>
+                3 Accomplishments
+            </label>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend for="1805782935">1. Provide a list of secondary school and other education institutions including international exchange programs.</legend>
+    <div class="form-group">
+        <select id="1805782935" name="entry.788303140" class="form-control">
+            <option value="School Name                                                          City, State                                                   Dates Attended">School Name                                                          City, State                                                   Dates Attended</option>
+            <option value="School Name                                                          City, State                                                  Dates Attended">School Name                                                          City, State                                                  Dates Attended</option>
+            <option value="School Name                                                         City, State                                                    Dates Attended">School Name                                                         City, State                                                    Dates Attended</option>
+        </select>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend for="496246652">2. Provide a list of all school and college related activities (sports, arts, music, volunteering) with dates of involvement.</legend>
+    <div class="form-group">
+        <textarea id="1766094289" name="entry.1766094289" class="form-control" required></textarea>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend for="2128562467">3. Provide of list of other volunteering and community activities not related to school with dates of involvement.</legend>
+    <div class="form-group">
+        <textarea id="49583743" name="entry.49583743" class="form-control" required></textarea>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend for="1901725821">4. Provide an example of an experience where you displayed leadership skills.</legend>
+    <div class="form-group">
+        <textarea id="1312850342" name="entry.1312850342" class="form-control" required></textarea>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend for="1723741593">5. How do you plan to use your education to impact to your community, society and country?</legend>
+    <div class="form-group">
+        <textarea id="774082090" name="entry.774082090" class="form-control" required></textarea>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend for="1975195753">6. Anything else you would like to let us know about yourself that is relevant to your scholarship application?</legend>
+    <div class="form-group">
+        <textarea id="598209504" name="entry.598209504" class="form-control" required></textarea>
+    </div>
+</fieldset>
+
+<input type="hidden" name="fvv" value="1">
+<input type="hidden" name="fbzx" value="-6306136825722773412">
+
+<input type="hidden" name="pageHistory" value="0,1,2">
+
+<input class="btn btn-primary" type="submit" value="Submit">
+</form>
+<button class="submit"><a href="new page.html"></a>Complete</button>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+<script>
+$('#bootstrapForm').submit(function (event) {
+event.preventDefault()
+var extraData = {}
+{
+    /* Parsing input date id=1366943480 */
+    var dateField = $("#1366943480_date").val()
+    var timeField = $("#1366943480_time").val()
+    let d = new Date(dateField)
+    if (!isNaN(d.getTime())) {
+        extraData["entry.1366943480_year"] = d.getFullYear()
+        extraData["entry.1366943480_month"] = d.getMonth() + 1
+        extraData["entry.1366943480_day"] = d.getUTCDate()
+    }
+    if (timeField && timeField.split(':').length >= 2) {
+        let values = timeField.split(':')
+        extraData["entry.1366943480_hour"] = values[0]
+        extraData["entry.1366943480_minute"] = values[1]
+    }
+}
+{
+    /* Parsing input date id=737336953 */
+    var dateField = $("#737336953_date").val()
+    var timeField = $("#737336953_time").val()
+    let d = new Date(dateField)
+    if (!isNaN(d.getTime())) {
+        extraData["entry.737336953_year"] = d.getFullYear()
+        extraData["entry.737336953_month"] = d.getMonth() + 1
+        extraData["entry.737336953_day"] = d.getUTCDate()
+    }
+    if (timeField && timeField.split(':').length >= 2) {
+        let values = timeField.split(':')
+        extraData["entry.737336953_hour"] = values[0]
+        extraData["entry.737336953_minute"] = values[1]
+    }
+}
+$('#bootstrapForm').ajaxSubmit({
+    data: extraData,
+    dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+    error: function () {
+        // Submit of form should be successful but JSONP callback will fail because Google Forms
+        // does not support it, so this is handled as a failure.
+        alert('Form Submitted. Thanks.')
+        // You can also redirect the user to a custom thank-you page:
+        // window.location = 'http://www.mydomain.com/thankyoupage.html'
+    }
+})
+})
+</script>
+</body>
+</html>
